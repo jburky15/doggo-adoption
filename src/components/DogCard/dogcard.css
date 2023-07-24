@@ -1,0 +1,23 @@
+.dog-card {
+    width: 250px;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 5px;
+    margin: 10px;
+  }
+  
+  img {
+    width: 100%;
+    height: 170px;
+    border-radius: 5px 5px 0 0;
+    margin-bottom: 10px;
+    object-fit: cover;
+  }
+  
+  .dogBreed {
+    font-weight: 700;
+  }
+  
+  .dogDescription {
+    line-height: 1.5;
+    padding: 10px;
+  }
