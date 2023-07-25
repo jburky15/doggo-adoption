@@ -1,5 +1,6 @@
 import React from 'react'
 import "./dogcard.css"
+import { AdoptButton } from '../adoptButton/AdoptButton';
 
 export const DogCard = ({ name, breed, age, description, image }) => {
     const year = age < 2 ? 'year' : 'years';
@@ -10,6 +11,7 @@ export const DogCard = ({ name, breed, age, description, image }) => {
             <h3>{name} • {age} {year} old</h3>
             <p className='dogBreed'>{breed}</p>
             <p className='dogDescription'>{description}</p>
+            <AdoptButton />
         </div>
     )
 }

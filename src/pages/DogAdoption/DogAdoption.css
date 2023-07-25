@@ -1,0 +1,16 @@
+.dog-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.adoptionHeader {
+  margin: 3rem auto;
+}
+  
+@media (max-width: 720px) {
+    .dog-container {
+      grid-template-columns: 1fr;
+    }
+}
