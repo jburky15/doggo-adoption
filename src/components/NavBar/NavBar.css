@@ -10,8 +10,8 @@
 }
 
 .navHeader {
-    z-index: 11;
-    margin-right: -60vw;
+    width: 100%;
+    margin-right: -10vw;
 }
 
 .pageLinks h1 {
@@ -44,20 +44,31 @@
     width: 100px;
 }
 
+.hamburgerMenu {
+    display: none;
+}
 
 @media (max-width: 1080px) {
     .navHeader {
-        font-size: .5rem;
-        margin-top: 1.25rem;
-        margin-right: -70vw;
+        font-size: .25rem;
+        margin-top: 0;
+        margin-right: 3vw;
+    }
+
+    .pageLink:nth-child(4) {
+        margin-right: -15vw;
     }
 }
 
 @media (max-width: 768px) {
     .navHeader {
-        margin-right: -50vw;
+        margin-right: 10vw;
     }
     .pageLink {
         display: none;
+    }
+    .hamburgerMenu {
+        display: inline;
+        margin-left: -25vw;
     }
 }
