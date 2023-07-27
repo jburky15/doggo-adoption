@@ -1,0 +1,52 @@
+.contactHeader {
+    margin-top: 10vh;
+}
+
+.contactWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.hoursOfOperation {
+    line-height: .125;
+    margin: auto 2rem 2rem auto;
+}
+
+.phoneNumber {
+    margin: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.hoursHeader {
+    margin-bottom: 2rem;
+}
+
+.hoursOfOperation span {
+    font-weight: 700;
+}
+
+.closedDay {
+    color: rgb(216, 16, 16);
+}
+
+.mapWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    .contactHeader {
+        margin-top: 5vh;
+        font-size: 1.5rem;
+    }
+
+    .hoursOfOperation {
+        margin: auto 1rem;
+    }
+
+    .hoursHeader {
+        font-size: 1rem;
+        margin-bottom: 1.25rem;
+    }
+}

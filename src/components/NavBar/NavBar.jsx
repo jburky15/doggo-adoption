@@ -11,7 +11,9 @@ export const NavBar = () => {
         <Link to="/DogAdoptions" className='pageLink'>Dogs</Link>
         <Link to="/AdopionForm" className='pageLink'>Adoption Form</Link>
         <Link to="/Contact" className='pageLink'>Contact Us</Link>
-        <div className="navHeader"><h1>Doggo Adoption Network</h1></div>
+    </div>
+    <div className="navHeader">
+      <h1>Doggo Adoption Network</h1>
     </div>
     </>
   )

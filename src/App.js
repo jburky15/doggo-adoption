@@ -3,6 +3,7 @@ import './App.css';
 import Home from './pages/Home/Home';
 import DogAdoptions from './pages/DogAdoption/DogAdoptions';
 import { NavBar } from './components/NavBar/NavBar';
+import ContactPage from './pages/Contact/Contact';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="DogAdoptions" element={<DogAdoptions />} />
+        <Route path="Contact" element={<ContactPage />} />
       </Routes>
     </div>
   );
