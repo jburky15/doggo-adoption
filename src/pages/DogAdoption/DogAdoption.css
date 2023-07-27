@@ -6,7 +6,7 @@
 }
 
 .adoptionHeader {
-  margin: 3rem auto;
+  margin: 8dvh auto 3rem auto;
 }
   
 @media (max-width: 720px) {
