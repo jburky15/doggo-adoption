@@ -26,6 +26,11 @@
 }
 
 .phoneNumber {
+    font-size: 1.5rem;
+    margin-bottom: -1.5rem;
+}
+
+.address {
     padding-bottom: 1rem;
     font-size: 1.5rem;
 }
@@ -33,6 +38,13 @@
 .mapWrapper {
     display: flex;
     flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.gMap {
+    border: none;
+    border-radius: 5px;
+    box-shadow: 8px 10px 15px black;
 }
 
 @media (max-width: 768px) {
