@@ -1,3 +1,10 @@
+.underConstruction {
+    height: 320px;
+    width: 800px;
+    margin-top: 10vh;
+    margin-bottom: -30vh;
+}
+
 .mainContent {
     display: flex;
     align-items: center;
@@ -6,12 +13,10 @@
     flex-direction: column;
     margin: 0;
     padding: 0;
-    height: 100vh;
+    height: 42vh;
 }
 
-.underConstruction {
-    height: 320px;
-    width: 800px;
-    margin-top: 10vh;
-    margin-bottom: -40vh;
+.constructionText {
+    margin-top: 23rem;
+    font-size: 3rem;
 }

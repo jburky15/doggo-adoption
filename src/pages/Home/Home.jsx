@@ -6,10 +6,10 @@ const Home = () => {
   return (
     <>
       <div>
-      <img src={ underConstruction } alt="" className='underConstruction' />
+      <img src={ underConstruction } alt="Under Construction" className='underConstruction' />
         <div className='mainContent'>
           <h1>This is the Home Page For Doggo Adoption Network!</h1>
-          <p>Please pardon our dust, we are currently under construction!</p>
+          <p className='constructionText'>Please pardon our dust, we are currently under construction!</p>
         </div>
       </div>
     </>

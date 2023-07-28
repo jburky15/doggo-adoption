@@ -1,12 +1,12 @@
+.adoptionHeader {
+  margin-bottom: 3rem;
+}
+
 .dog-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 3rem;
     margin-bottom: 2rem;
-}
-
-.adoptionHeader {
-  margin: 8dvh auto 3rem auto;
 }
   
 @media (max-width: 720px) {
