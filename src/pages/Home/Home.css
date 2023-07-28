@@ -8,3 +8,10 @@
     padding: 0;
     height: 100vh;
 }
+
+.underConstruction {
+    height: 320px;
+    width: 800px;
+    margin-top: 10vh;
+    margin-bottom: -40vh;
+}
