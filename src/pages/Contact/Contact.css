@@ -1,21 +1,16 @@
 .contactWrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    font-size: 1.5rem;
 }
 
 .hoursOfOperation {
     line-height: .125;
-    margin: auto 2rem 2rem auto;
-}
-
-.phoneNumber {
-    margin: 1rem;
-    padding-bottom: 1rem;
-    font-size: 1.5rem;
+    margin: -1rem 2rem auto auto;
 }
 
 .hoursHeader {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .hoursOfOperation span {
@@ -24,6 +19,15 @@
 
 .closedDay {
     color: rgb(216, 16, 16);
+}
+
+.phoneNumberHeader {
+    margin-bottom: -1rem;
+}
+
+.phoneNumber {
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
 }
 
 .mapWrapper {

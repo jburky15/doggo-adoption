@@ -9,8 +9,6 @@ const ContactPage = () => {
 
         <div className="contactWrapper">
             <div className='hoursOfOperation'>
-                <h3 className='phoneNumberHeader'>Our Phone#:</h3>
-                <p className='phoneNumber'>888-888-8888</p>
                 <h3 className='hoursHeader'>Our Hours of Operation:</h3>
                 <p className='closedDay'><span>Sun</span>: Closed</p>
                 <p><span>Mon</span>: 9am - 5pm</p>
@@ -24,6 +22,18 @@ const ContactPage = () => {
         </div>
         <div className="mapWrapper">
                 <h1>Google Maps Placeholder</h1>
+                <h3 className='phoneNumberHeader'>Our Phone#:</h3>
+                <p className='phoneNumber'>888-888-8888</p>
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d649.2717155260995!2d-75.8693647580722!3d43.05970475894174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d985316f8db50f%3A0x5392acd4bc2ea38c!2s11%20Pottery%20Rd%2C%20Chittenango%2C%20NY%2013037!5e0!3m2!1sen!2sus!4v1690543924282!5m2!1sen!2sus"
+                  title="Doggo Adoption Network"
+                  width="600" 
+                  height="450" 
+                  style={{ border: "0" }} 
+                  allowfullscreen="" 
+                  loading="lazy" 
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
         </div>
     </>
   )
