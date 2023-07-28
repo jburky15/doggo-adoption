@@ -8,6 +8,12 @@
     gap: 3rem;
     margin-bottom: 2rem;
 }
+
+@media (max-width: 1068px) {
+  .dog-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
   
 @media (max-width: 720px) {
     .dog-container {

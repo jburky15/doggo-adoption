@@ -4,7 +4,8 @@ import { NavBar } from './components/NavBar/NavBar';
 import Home from './pages/Home/Home';
 import DogAdoptions from './pages/DogAdoption/DogAdoptions';
 import ContactPage from './pages/Contact/Contact';
-import AdoptionForm from './pages/AdoptionForm/AdoptionForm';
+import AdoptForm from './pages/AdoptForm/AdoptForm';
+
 
 function App() {
   return (
@@ -13,8 +14,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="DogAdoptions" element={<DogAdoptions />} />
+        <Route path="AdoptForm" element={<AdoptForm />} />
         <Route path="Contact" element={<ContactPage />} />
-        <Route path="AdoptionForm" element={<AdoptionForm />} />
       </Routes>
     </div>
   );

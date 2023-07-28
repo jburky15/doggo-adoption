@@ -31,8 +31,7 @@ const ContactForm = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(data),
-      })
-        .then((response) => {
+      }).then((response) => {
           // It's likely a spam/bot request, so bypass it to validate via captcha
           if (response.status === 422) {
             Object.keys(injectedData).forEach((key) => {
@@ -70,19 +69,15 @@ const ContactForm = () => {
         onSubmit={handleSubmit}
         method="POST"
       >
-
         <div>
             <input type="text" placeholder="Your name" name="name" required  className="nameForm" />
         </div>
-
         <div>
             <input type="email" placeholder="Your Email" name="email" required className="emailForm" />
         </div>
-
         <div>
             <textarea placeholder="Your message" name="message" required className="textForm" />
         </div>
-
         <div>
             <button type="submit" className="btnForm"> Send us a message </button>
         </div>
