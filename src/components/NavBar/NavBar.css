@@ -12,12 +12,12 @@
 .navHeader {
     font-size: 2rem;
     z-index: 11;
+    margin-right: -60vw;
 }
 
 .navHeader h1 {
     font-size: 1.25rem;
-    margin-right: -60vw;
-    margin-top: -6vh;
+    margin-top: -9vh;
     position: fixed;
 }
 
@@ -61,9 +61,9 @@
     }
 
     .navHeader h1 {
-        font-size: 1rem;
+        font-size: 1.25rem;
         width: 200px;
-        margin-top: -6.5vh;
+        margin-top: -9vh;
     }
 
     .pageLink:nth-child(4) {
