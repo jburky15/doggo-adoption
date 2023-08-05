@@ -1,0 +1,4 @@
+.residenceRadios input:nth-child(2) {
+    margin-left: 15px;
+    color: red;
+}
