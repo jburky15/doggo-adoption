@@ -80,27 +80,32 @@ const AdoptForm = () => {
   }
 
   return (
-    <div className="App">
+    <div className="adoptionForm">
       <form onSubmit={ handleSubmit }>
 
         <FormInputs name="fullname" placeholder="Full Name"/>
         <h3>Type of Residence</h3>
         <FormRadios />
-        <FormInputs name="email" placeholder="Email"/>
-        <FormInputs name="address" placeholder="Address"/>
-        <FormInputs name="city" placeholder="City"/>
-        <FormInputs name="state" placeholder="State"/>
-        <FormInputs name="zip" placeholder="Zip"/>
-        <FormInputs name="phone" placeholder="Phone #"/>
+        <div className="adoptionInputs">
+          <FormInputs name="email" placeholder="Email"/>
+          <FormInputs name="address" placeholder="Address"/>
+          <FormInputs name="city" placeholder="City"/>
+          <FormInputs name="state" placeholder="State"/>
+          <FormInputs name="zip" placeholder="Zip"/>
+          <FormInputs name="phone" placeholder="Phone #"/>
+        </div>
         <h3>Do you have any of the following in your home: </h3>
-        <FormCheckboxes label="Dog" />
-        <FormCheckboxes label="Cat" />
-        <FormCheckboxes label="Bird" />
-        <FormCheckboxes label="Rabbit" />
-        <FormCheckboxes label="Other Pet" />
+        <div className="animalCheckboxes">
+          <FormCheckboxes label="Dog" />
+          <FormCheckboxes label="Cat" />
+          <FormCheckboxes label="Bird" />
+          <FormCheckboxes label="Rabbit" />
+          <FormCheckboxes label="Other Pet" />
+        </div>
         <h4>If other, please specify:</h4>
-        <FormInputs name="otherInput" label="OtherInput" placeholder="Ferret" /> 
-        <button>Submit</button>
+          <FormInputs name="otherInput" label="OtherInput" placeholder="Ferret" />
+         
+        <button className='adoptionSubmit'>Submit</button>
 
       </form>
     </div>
