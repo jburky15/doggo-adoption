@@ -1,5 +1,5 @@
 .underConstruction {
-    height: 320px;
+    height: 300px;
     width: 800px;
     margin-top: 10vh;
     margin-bottom: -30vh;
@@ -19,4 +19,23 @@
 .constructionText {
     margin-top: 23rem;
     font-size: 3rem;
+}
+
+@media (max-width: 768px) {
+    .underConstruction {
+        height: 150px;
+        width: 400px;
+        margin-top: 2vh;
+        margin-bottom: -20vh;
+    }
+    
+    .mainContent {
+        margin-top: -9vh;
+        font-size: .5rem;
+    }
+
+    .constructionText {
+        font-size: 1rem;
+        margin-top: 12rem;
+    }
 }
