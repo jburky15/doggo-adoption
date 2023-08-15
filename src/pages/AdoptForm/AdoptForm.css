@@ -2,10 +2,23 @@
     margin-top: 10vh;
 }
 
+.landlordInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
 .adoptionInputs {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
+}
+
+.radioSelector {
+    margin-left: 2rem;
 }
 
 .animalCheckboxes {

@@ -2,7 +2,6 @@ import { React, useState } from 'react';
 import './AdoptForm.css';
 import FormCheckboxes from '../../components/adoptionForm/FormCheckboxes';
 import FormInputs from '../../components/adoptionForm/FormInputs';
-import FormRadios from '../../components/adoptionForm/FormRadios';
 
 const AdoptForm = () => {
   const [values, setValues] = useState({
@@ -81,28 +80,30 @@ const AdoptForm = () => {
 
   return (
     <div className="adoptionForm">
+      <h1>Doggo Network Adoption Form</h1>
       <form onSubmit={ handleSubmit }>
 
         <FormInputs name="fullname" placeholder="Full Name"/>
         <h3>Type of Residence</h3>
-        <FormRadios />
+        <input className='radioSelector' type="radio" value="home" name="home" /> Home
+        <input className='radioSelector' type="radio" value="aparment" name="apartment" /> Apartment
+        <div className='landlordInfo'>
+          <h3>If you rent:</h3>
+            <FormInputs name="landlord" placeholder="Name of Landlord" />
+            <FormInputs name="landlordphone" placeholder="Landlord's Phone #" />
+        </div>
         <div className="adoptionInputs">
-          <FormInputs name="email" placeholder="Email"/>
           <FormInputs name="address" placeholder="Address"/>
           <FormInputs name="city" placeholder="City"/>
           <FormInputs name="state" placeholder="State"/>
           <FormInputs name="zip" placeholder="Zip"/>
+          <FormInputs name="email" placeholder="Email"/>
           <FormInputs name="phone" placeholder="Phone #"/>
         </div>
-        <h3>Do you have any of the following in your home: </h3>
-        <div className="animalCheckboxes">
-          <FormCheckboxes label="Dog" />
-          <FormCheckboxes label="Cat" />
-          <FormCheckboxes label="Bird" />
-          <FormCheckboxes label="Rabbit" />
-          <FormCheckboxes label="Other Pet" />
-        </div>
-        <h4>If other, please specify:</h4>
+        <h3>Do you have any other pets in your home? </h3>
+        <input className='radioSelector' type="radio" value="yes" name="yes" /> Yes
+        <input className='radioSelector' type="radio" value="no" name="no" /> No
+        <h4>If yes, please specify:</h4>
           <FormInputs name="otherInput" label="OtherInput" placeholder="Ferret" />
          
         <button className='adoptionSubmit'>Submit</button>
