@@ -2,6 +2,30 @@
     margin-top: 10vh;
 }
 
+.mainInputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+input {
+    text-align: center;
+}
+
+.applicantHousing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.rentalCheck {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -1rem;
+    gap: 2rem;
+}
+
 .landlordInfo {
     display: flex;
     align-items: center;
@@ -19,11 +43,6 @@
 
 .radioSelector {
     margin-left: 2rem;
-}
-
-.animalCheckboxes {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .adoptionSubmit {
@@ -49,10 +68,6 @@
 
 @media (max-width: 768px) {
     .adoptionInputs {
-        grid-template-columns: 1fr;
-    }
-
-    .animalCheckboxes {
         grid-template-columns: 1fr;
     }
 }

@@ -5,7 +5,8 @@ import FormInputs from '../../components/adoptionForm/FormInputs';
 
 const AdoptForm = () => {
   const [values, setValues] = useState({
-    fullname: "",
+    firstname: "",
+    lastname: "",
     email: "",
     address: "",
     city: "",
@@ -18,59 +19,59 @@ const AdoptForm = () => {
   const inputs = [
     {
       id: 1,
-      name: "fullname",
+      name: "firstname",
       type: "text",
-      placeholder: "Full Name",
+      placeholder: "First Name",
       label: "fullname"
     },
     {
       id: 2,
+      name: "lastname",
+      type: "text",
+      placeholder: "Last Name",
+      label: "fullname"
+    },
+    {
+      id: 3,
       name: "email",
       type: "text",
       placeholder: "Email",
       label: "email"
     },
     {
-      id: 3,
+      id: 4,
       name: "address",
       type: "text",
       placeholder: "Address",
       label: "address"
     },
     {
-      id: 4,
+      id: 5,
       name: "city",
       type: "text",
       placeholder: "City",
       label: "city"
     },
     {
-      id: 5,
+      id: 6,
       name: "state",
       type: "text",
       placeholder: "State",
       label: "state"
     },
     {
-      id: 6,
+      id: 7,
       name: "zipCode",
       type: "text",
       placeholder: "Zip",
       label: "zipCode"
     },
     {
-      id: 7,
+      id: 8,
       name: "phoneNumber",
       type: "text",
       placeholder: "Phone #",
       label: "phoneNumber"
-    },
-    {
-      id: 8,
-      name: "otherInput",
-      type: "text",
-      placeholder: "Ferret",
-      label: "otherInput"
     }
   ]
 
@@ -78,34 +79,43 @@ const AdoptForm = () => {
     e.preventDefault();
   }
 
+  const [selectedHousingRadio, setSelectedHousingRadio] = useState('home')
+  const isHousingRadioChecked = (value) => selectedHousingRadio === value
+  const handleHousingRadioSelect = (e) => setSelectedHousingRadio(e.currentTarget.value)
+
+  const [selectedPetRadio, setSelectedPetRadio] = useState('no')
+  const isPetRadioChecked = (value) => selectedPetRadio === value
+  const handlePetRadioSelect = (e) => setSelectedPetRadio(e.currentTarget.value)
+
   return (
     <div className="adoptionForm">
       <h1>Doggo Network Adoption Form</h1>
       <form onSubmit={ handleSubmit }>
-
-        <FormInputs name="fullname" placeholder="Full Name"/>
-        <h3>Type of Residence</h3>
-        <input className='radioSelector' type="radio" value="home" name="home" /> Home
-        <input className='radioSelector' type="radio" value="aparment" name="apartment" /> Apartment
+        <div className="mainInputs">
+          {inputs.map((input => (
+            <FormInputs key={input.id} {...input} value={values[input.name]} />
+          )))}
+        </div>
+        <div className="applicantHousing">
+          <h3>Type of Residence</h3>
+          <input className='radioSelector' type="radio" value="home" name="home" checked={isHousingRadioChecked("home")} onChange={handleHousingRadioSelect}/> Home
+          <input className='radioSelector' type="radio" value="apartment" name="apartment" checked={isHousingRadioChecked("apartment")} onChange={handleHousingRadioSelect}/> Apartment
+        </div>
+        <div className="rentalCheck">
+            <FormCheckboxes label="(Is this a rental property?)   Yes"/>
+            <FormCheckboxes label="No"/>
+          </div>
         <div className='landlordInfo'>
           <h3>If you rent:</h3>
             <FormInputs name="landlord" placeholder="Name of Landlord" />
             <FormInputs name="landlordphone" placeholder="Landlord's Phone #" />
         </div>
-        <div className="adoptionInputs">
-          <FormInputs name="address" placeholder="Address"/>
-          <FormInputs name="city" placeholder="City"/>
-          <FormInputs name="state" placeholder="State"/>
-          <FormInputs name="zip" placeholder="Zip"/>
-          <FormInputs name="email" placeholder="Email"/>
-          <FormInputs name="phone" placeholder="Phone #"/>
-        </div>
         <h3>Do you have any other pets in your home? </h3>
-        <input className='radioSelector' type="radio" value="yes" name="yes" /> Yes
-        <input className='radioSelector' type="radio" value="no" name="no" /> No
+        <input className='radioSelector' type="radio" value="yes" name="yes" checked={isPetRadioChecked("yes")} onChange={handlePetRadioSelect}/> Yes
+        <input className='radioSelector' type="radio" value="no" name="no" checked={isPetRadioChecked("no")} onChange={handlePetRadioSelect}/> No
         <h4>If yes, please specify:</h4>
-          <FormInputs name="otherInput" label="OtherInput" placeholder="Ferret" />
-         
+          <FormInputs name="otherInput" label="OtherInput" placeholder="Rabbit" />
+        
         <button className='adoptionSubmit'>Submit</button>
 
       </form>
