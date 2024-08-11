@@ -116,7 +116,7 @@ const AdoptForm = () => {
         <h5>Separate each with a comma ( , )</h5>
           <FormInputs name="otherInput" label="OtherInput" placeholder="Rabbit" />
         
-        <button className='adoptionSubmit'>Submit</button>
+        <button className='adoptionSubmit' type='submit'>Submit</button>
 
       </form>
     </div>
