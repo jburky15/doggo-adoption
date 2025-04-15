@@ -1,2 +1,2 @@
 # Doggo Adoption
-- An mock dog adoption website
+- A mock dog adoption website
